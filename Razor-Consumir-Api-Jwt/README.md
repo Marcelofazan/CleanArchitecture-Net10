@@ -18,6 +18,8 @@ O banco de dados é SQLite **(`SistemaERPOnlineForcaDeVendasAPI.db`)** , onde se
 #### Rotas dos métodos 
 | Metodo | Descrição |
 |-----------|-----------|
+| Metodo: POST | api/Auth/registro  |
+| Metodo: GET | api/Auth/login |
 | Metodo: GET/POST | /api/Produtos  |
 | Metodo: GET/PUT/DELETE  | /api/Produtos/{id} |
 
