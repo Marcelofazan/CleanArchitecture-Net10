@@ -6,7 +6,7 @@ Exemplo de criação de API em Clean Architecture com Autorização utilizando J
 | Tecnologia | Descrição |
 |-----------|-----------|
 | **Clean Architecture** | Organização do código em camadas, mantendo (as regras de negócio) totalmente independentes |
-| **JWT** | Implementação de autenticação e autorização em WebAPI |
+| **JWT** | É um crachá digital usado para identificar usuários e trocar informações de forma segura entre computadores |
 | **Service** | Separação da criação de objetos e de sua reutilização, ideal para a realização de testes unitários |
 
 #### Requisitos do Projeto
@@ -108,9 +108,7 @@ Exemplo de criação de CRUD com Autenticação JWT em .NET8 Razor, para Consumo
 #### O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
 |-----------|-----------|
-| **JWT** | Uso de autorização em WebAPI |
 | **Razor** | Atua como o motor de renderização que combina C# com HTML para criar páginas dinâmicas |
-| **Service** | Prática utilizada com Interfaces e Injeção de Dependência para Arquitetura em Camadas (ou Clean Architecture ) |
 
 #### 🔄 Executar a aplicação
 Executar a aplicação Backend **https://github.com/Marcelofazan/API-EF10-JWT** que se encontra no Github.
