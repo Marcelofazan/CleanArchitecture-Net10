@@ -1,7 +1,7 @@
 ## 🚀 Api10-EF-Jwt
 Exemplo de criação de API em Clean Architecture com Autorização utilizando JWT, desenvolvido em .NET 10 com banco de dados SQLite.
 
-#### O que você vai encontrar neste projeto
+#### 📋 O que você vai encontrar neste projeto
 
 | Tecnologia | Descrição |
 |-----------|-----------|
@@ -105,7 +105,7 @@ Os testes cobrem a camada **Aplicacao** (ProdutoService), com mocks dos reposit�
 ## 🌐 Razor-Consumir-Api-Jwt
 Exemplo de criação de CRUD com Autenticação JWT em .NET8 Razor, para Consumo de API.
 
-#### O que você vai encontrar neste projeto
+#### 📋 O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
 |-----------|-----------|
 | **Razor** | Atua como o motor de renderização que combina C# com HTML para criar páginas dinâmicas |
