@@ -1,14 +1,12 @@
 ## 🚀 CleanArchitecture-Api10-EF-Jwt
 Exemplo de API Arquitetura Clean Architecture com Autenticação Jwt em C# .NET 10 com banco de dados SQLite.
 
-## 📁 Api10-EF-Jwt
-#### 📋 O que você vai encontrar neste projeto
-
 | Tecnologia | Descrição |
 |-----------|-----------|
 | **Clean Architecture** | Organização do código em camadas, mantendo (as regras de negócio) totalmente independentes |
 | **JWT** | É um crachá digital usado para identificar usuários e trocar informações de forma segura entre computadores |
 
+## 📁 Api10-EF-Jwt
 #### 🔄 Executar a Aplicação
 No Visual Studio Abra (Ferramentas) > (Gerenciador de Pacotes NuGet) > (Console do Gerenciador de Pacotes Nuget)  
 Necessário para Atualizar o Depurador com a Solução. 
@@ -101,19 +99,10 @@ Os testes cobrem a camada **Aplicacao** (ProdutoService), com mocks dos reposit�
 - **JWT:** Em `appsettings.json`, substitua `Jwt:Key` por uma chave segura com **mínimo 32 caracteres** (ou defina a variável de ambiente `Jwt__Key`). Em produção use sempre variáveis de ambiente ou User Secrets.
 
 ## 🌐 Razor-Consumir-Api-Jwt
-Exemplo de CRUD com Autenticação Jwt em C# ASP.NET Core8.
-
-#### 📋 O que você vai encontrar neste projeto
-| Tecnologia | Descrição |
-|-----------|-----------|
-| **Razor** | Atua como o motor de renderização que combina C# com HTML para criar páginas dinâmicas |
+Exemplo de CRUD com Autenticação Jwt em C# ASP.NET Core 8.
 
 #### 🔄 Executar a aplicação
 Executar a aplicação Backend **https://github.com/Marcelofazan/API-EF10-JWT** que se encontra no Github.
-
-  - [API-EF10-JWT](https://github.com/Marcelofazan/API-EF10-JWT)
-  
-O banco de dados é SQLite **(`SistemaERPOnlineForcaDeVendasAPI.db`)** , onde será maninupado por essa aplicação como Frontend.
 
 | Metodo | Descrição |
 |-----------|-----------|
