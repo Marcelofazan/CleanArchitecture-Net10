@@ -4,15 +4,52 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+variables:
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
 steps:
 - task: NuGetToolInstaller@1
+  displayName: 'Instalar Ferramenta NuGet'
+
+# ==========================================
+# 1. COMPILAÇÃO DA API (Api10-EF-Jwt)
+# ==========================================
 - task: NuGetCommand@2
-  displayName: 'Restore NuGet'
+  displayName: 'NuGet Restore - API'
   inputs:
-    restoreSolution: '**/*.sln'
+    restoreSolution: 'Api10-EF-Jwt/**/*.sln'
+
 - task: VSBuild@1
-  displayName: 'Build'
+  displayName: 'Build - API'
   inputs:
-    solution: '**/*.sln'
-    platform: 'Any CPU'
-    configuration: 'Release'
+    solution: 'Api10-EF-Jwt/**/*.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:PackageLocation="$(build.artifactStagingDirectory)/API"'
+
+# ==========================================
+# 2. COMPILAÇÃO DO FRONT-END (Razor-Consumir-Api-Jwt)
+# ==========================================
+- task: NuGetCommand@2
+  displayName: 'NuGet Restore - FrontEnd'
+  inputs:
+    restoreSolution: 'Razor-Consumir-Api-Jwt/**/*.sln'
+
+- task: VSBuild@1
+  displayName: 'Build - FrontEnd'
+  inputs:
+    solution: 'Razor-Consumir-Api-Jwt/**/*.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:PackageLocation="$(build.artifactStagingDirectory)/FrontEnd"'
+
+# ==========================================
+# 3. DISPONIBILIZAR OS ARQUIVOS (Artefatos)
+# ==========================================
+- task: PublishBuildArtifacts@1
+  displayName: 'Publicar Artefatos Finais'
+  inputs:
+    PathtoPublish: '$(build.artifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
