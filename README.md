@@ -8,6 +8,9 @@ Exemplo de projeto Clean Architecture com Autenticação Jwt em C# ASP.NET 10 EF
 | **CQRS** | Padrão arquitetural que separa as operações de escrita (comandos) das operações de leitura (consultas) |
 | **JWT** | Crachá digital usado para identificar usuários e trocar informações de forma segura entre computadores |
 
+#### 💬 Requisitos do Projeto
+- Realizar Migrations EntityFramework .NET
+
 ## 📁 Api10-EF-Jwt
 #### 🔄 Executar a Aplicação
 No Visual Studio Abra (Ferramentas) > (Gerenciador de Pacotes NuGet) > (Console do Gerenciador de Pacotes Nuget)  
