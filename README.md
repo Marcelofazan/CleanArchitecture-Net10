@@ -1,4 +1,4 @@
-## 🌐 CleanArchitecture-RazorMvc10
+## 🌐 CleanArchitecture-RazorMvc
 Exemplo de projeto de Formação de Preço com Arquitetura Clean Architecture em C# ASP.NET Core 10 EF Razor Mvc com Autenticação Jwt com banco de dados SQLite.
 
 | Tecnologia | Descrição |
